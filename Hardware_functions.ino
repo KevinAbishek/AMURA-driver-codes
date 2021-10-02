@@ -40,6 +40,9 @@ void do_stepY (byte dir)
 
 void prog ()
 {
+  /*
+ * Function to reprogram the stepper motor drivers to required settings
+ */
   Xstepper.set_enable (false) ;
   Ystepper.set_enable (false) ;
   delay (10) ;
@@ -57,6 +60,9 @@ void prog ()
 
 void home_pos ()
 {
+  /*
+ * Function to return slide table to home position
+ */
   xpos  = 0  ;
   ypos  = 0 ;
   int del1 = 500 ;
@@ -109,6 +115,9 @@ void home_pos ()
 
 void  enable_lock ()
 {   
+  /*
+ * Function to actively hold/lock the steppers 
+ */
     int s1 = s,  i1 = i  ;
     s = 256 ; i = 3 ;
     Xstepper.set_enable (false) ;
@@ -134,6 +143,9 @@ void  enable_lock ()
 
 void  home_eject ()
 { 
+  /*
+ * Function to navigate slide table to eject position allowing user to swap slides/samples to be scanned
+ */
     home_pos  ()  ;
     int s1 = s,  i1 = i  ;
     s = 32 ; i = 3 ;
@@ -163,6 +175,9 @@ void  home_eject ()
 
 void  move_line (int  del1)
 {
+  /*
+ * Function to move the slide in a linear motion wrt the objective lens (camera)
+ */
   while ((SCX  !=  0) || (SCY  !=  0))
   {
     if  (SCX  !=  0)

@@ -1,3 +1,11 @@
+/*
+ * Numeric Control software:
+ * 
+ * User will have to input a series of strings in the format "...FUNCTIONxx.." where FUNCTION is a alphabet character ('B', 'b', 'H', 'L', 'M', 'P', 'S', 'X', 'Y')
+ * and xx is a numeric value for the control vector.
+ * 
+ */
+
 void func (char ch)
 {
   if  (ch ==  'B')                                                                                              //  Backlash compensation toggle

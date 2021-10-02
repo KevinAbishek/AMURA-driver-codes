@@ -16,7 +16,9 @@
 
 #define DRV8711_EEPROM_ADDR 0x100 // leave 256 bytes untouched
 
-
+/*
+ * GPIO pin definitions
+ */
 #  define XCSpin    37
 #  define XSTEPpin  36
 #  define XDIRpin   35
@@ -26,8 +28,8 @@
 #  define YDIRpin   23
 #  define YRESETpin 22
 #  define LED1 5
-#  define B1  2
-#  define B2  3
+#  define B1  2 //Button 1 to manually jog the stepper
+#  define B2  3 //Button 2 to manually jog the stepper
 # define  xLIM  6
 # define  yLIM  7
 # define  buzz  45

@@ -1,3 +1,7 @@
+/*
+ * Setup values for UART comms port, jog buttons, limit switches, buzzer, microscopy lamp, X and Y stepper speed, resolution and power settings
+ */
+
 void setup ()
 {
   pinMode (XRESETpin, OUTPUT) ;
@@ -26,5 +30,3 @@ void setup ()
   Ystepper.begin (60, s, 2, 0, 1, 0, i) ;
   delay(10) ;
 }
-
-
